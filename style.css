@@ -1,0 +1,223 @@
+@font-face {
+    font-family: hankengrotesk;
+    src : url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px red solid; */
+}
+body {
+    font-family: hankengrotesk;
+    display: grid;
+    place-content: center;
+}
+
+:root {
+    /* Primaries */
+    --light-red: #ff5757;
+    --orangey-yellow: #ffb01f;
+    --green-teal: #00bd91;
+    --cobalt-blue: #1125d4;
+
+    /* Gradients */
+    --light-slate-blue: #7857ff;
+    --light-royal-blue: #4e21ca;
+
+    /* circle */
+    --violet-blue: #4e21ca;
+    --persian-blue: #2421ca00;
+
+    /* Neutral */
+    --white: #ffffff;
+    --pale-blue: #ebf1ff;
+    --light-lavender: #c8c7ff;
+    --dark-gray-blue: #303b5a;
+}
+
+main{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 100%;
+    width: 100%;
+    margin-top: 2.5rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+    box-shadow: .3rem .3rem .3rem .3rem 
+    hsla(252, 100%, 67%, 0.1);
+}
+
+.left{
+    border-radius:2rem;
+    padding: 1.5em 3.5rem 0 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(0deg, var(--light-royal-blue) 0%, var(--light-slate-blue) 80%);
+}
+
+.header-text{
+    color: var(--light-lavender);
+    margin: 1.5rem 0 1.5em 0;
+    font-size: 1.5rem;
+}
+
+.circle{
+    padding: 2.5rem;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    background: linear-gradient(var(--violet-blue), var(--persian-blue));
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.circle h1{
+    font-size: 4rem;
+    color: var(--white);
+    padding: 0;
+}
+.circle p{
+    color: var(--light-lavender);
+}
+
+.left h3{
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: .5rem;
+}
+.left p{
+    color: var(--light-lavender);
+    text-align: center;
+}
+
+section {
+    padding: 2.5rem 1.5rem 0 1.5rem;
+}
+.section-header h3{
+    margin: 0 0 1.5em 0;
+    font-size: 1.5rem;
+    color: var(--dark-gray-blue);
+}
+
+.section-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem;
+    margin: .6rem;
+    border-radius: .5rem;
+}
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3.5rem 0 0;
+}
+.reaction-card{
+    background-color: #fdf0f0;
+}
+.reaction span{
+    color: var(--light-red);
+    margin-left: .5rem;
+    font-weight: 500;
+}
+.second span{
+    color: #808080;
+}
+
+.memory-card{
+    background-color: #faf4e9;
+}
+.memory span{
+    color: var(--orangey-yellow);
+    margin-left: .5rem;
+    font-weight: 500;
+}
+
+.verbal-card{
+    background-color: #e9f7f4;
+}
+.verbal span{
+    color: var(--green-teal);
+    margin-left: .5rem;
+    font-weight: 500;
+}
+
+.visual-card{
+    background-color: #e7e8f8;
+}
+.visual span{
+    color: var(--cobalt-blue);
+    margin-left: .5rem;
+    font-weight: 500;
+}
+
+.section-button{
+    width: 100%;
+    margin: 1.5rem 0 0 0;
+    padding: 1rem;
+    border-radius: 5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--light-royal-blue);
+    border: none;
+    cursor: pointer;
+    transition: .4s;
+}
+.section-button:hover{
+    background: linear-gradient(0deg, var(--light-royal-blue) 0%, var(--light-slate-blue) 80%);
+}
+.attribution{
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
+    text-align: start;
+}
+.attribution p{
+    font-size: 1rem;
+}
+.attribution a{
+    text-decoration: none;
+}
+.attribution a span{
+    color: #ff0101;
+}
+
+
+@media screen and (max-width: 768px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        border-radius:0 0 2rem 2rem;
+        padding: 1.5em 3.5rem 2.5rem 3.5rem;
+    }
+    .attribution{
+        display: none;
+    }
+}
+
+@media  screen and (max-width: 375px) {
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        border-radius:0 0 2rem 2rem;
+        padding: 1.5em 3.5rem 2.5rem 3.5rem;
+    }
+    .attribution{
+        display: none;
+    }
+}
